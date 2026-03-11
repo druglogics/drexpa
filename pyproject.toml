@@ -55,11 +55,11 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/drexpa"
+Homepage = "https://github.com/druglogics/drexpa"
 Documentation = "https://drexpa.readthedocs.io/"
-Repository = "https://github.com/yourusername/drexpa.git"
-Issues = "https://github.com/yourusername/drexpa/issues"
-Changelog = "https://github.com/yourusername/drexpa/blob/main/CHANGELOG.md"
+Repository = "https://github.com/druglogics/drexpa.git"
+Issues = "https://github.com/druglogics/drexpa/issues"
+Changelog = "https://github.com/druglogics/drexpa/blob/main/CHANGELOG.md"
 
 [project.scripts]
 drexpa = "drexpa.cli:main"

@@ -53,7 +53,7 @@ pip install drexpa
 
 ### Development Installation
 ```bash
-git clone https://github.com/yourusername/drexpa.git
+git clone https://github.com/druglogics/drexpa.git
 cd drexpa
 pip install -e ".[dev]"
 pytest  # Validate installation
@@ -399,11 +399,11 @@ If DREXPA is helpful in your research, please cite:
   title = {DREXPA: Drug Experimental Panel Generator},
   author = {Bermudez Paiva, Viviam},
   year = {2024},
-  url = {https://github.com/yourusername/drexpa}
+  url = {https://github.com/druglogics/drexpa}
 }
 ```
 
-For issues, feature requests, or questions: [GitHub Issues](https://github.com/yourusername/drexpa/issues)
+For issues, feature requests, or questions: [GitHub Issues](https://github.com/druglogics/drexpa/issues)
 
 ---
 
