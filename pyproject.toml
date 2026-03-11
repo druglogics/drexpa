@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drexpa"
+version = "0.1.0"
+description = "DREXPA (DRug EXperimental PAnel): Process experimental drug screening datasets into drug panels and perturbation files for in silico validation in DrugLogics pipeline (drabme/Bless modules) and GITSBE"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Viviam Bermudez"},
+]
+maintainers = [
+    {name = "Viviam Bermudez"},
+]
+keywords = ["drug-screening", "druglogics", "gitsbe", "systems-biology", "logical-modeling", "bioinformatics", "pharmacology"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Medical Science Research",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "pandas>=1.3.0",
+    "requests>=2.25.0",
+    "chembl-webresource-client>=0.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme",
+]
+all = [
+    "drexpa[dev,docs]",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/drexpa"
+Documentation = "https://drexpa.readthedocs.io/"
+Repository = "https://github.com/yourusername/drexpa.git"
+Issues = "https://github.com/yourusername/drexpa/issues"
+Changelog = "https://github.com/yourusername/drexpa/blob/main/CHANGELOG.md"
+
+[project.scripts]
+drexpa = "drexpa.cli:main"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["drexpa*"]
+
+[tool.setuptools.package-data]
+drexpa = ["*.txt", "*.md", "*.json", "resources/*.db"]

@@ -1,0 +1,21 @@
+{
+  "global": {
+    "output_dir": "results",
+    "base_data_dir": "data/input",
+    "verbose": false,
+    "save": true
+  },
+  "paths": {
+    "drug_names_file": "drug_names.txt",
+    "synergy_data_file": "synergy_data.csv",
+    "node_dict_file": "node_dict.csv",
+    "db_file": "drug_targets.db",
+    "manual_chembl_csv": "manual_chembl.csv"
+  },
+  "columns": {
+    "drug_name": "drug_name",
+    "concentration": "concentration",
+    "cell_line": "cell_line",
+    "synergy": "synergy"
+  }
+}

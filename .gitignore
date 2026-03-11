@@ -1,0 +1,10 @@
+drexpa.egg-info
+.pytest_cache
+drexpa/__pycache__
+tests/__pycache__
+
+#BASHI DATASET
+data/output/
+data/input/bashi/
+pre-processing notebooks/dataprocessing_bashi.ipynb
+

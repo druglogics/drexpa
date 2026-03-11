@@ -1,0 +1,10 @@
+Erlotinib
+Gefitinib
+Afatinib
+Osimertinib
+Lapatinib
+Trastuzumab
+Doxorubicin
+Paclitaxel
+Docetaxel
+Vincristine

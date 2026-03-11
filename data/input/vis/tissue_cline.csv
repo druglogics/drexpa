@@ -1,0 +1,758 @@
+TISSUE,CELL_LINE_NAME
+Bladder,5637
+Bladder,639-V
+Bladder,647-V
+Bladder,BFTC-905
+Bladder,CAL-29
+Bladder,DSH1
+Bladder,HT-1197
+Bladder,HT-1376
+Bladder,J82
+Bladder,KU-19-19
+Bladder,LB831-BLC
+Bladder,RT-112
+Bladder,RT4
+Bladder,SW1710
+Bladder,SW780
+Bladder,TCCSUP
+Bladder,UM-UC-3
+Bladder,VM-CUB-1
+Bone,A673
+Bone,CADO-ES1
+Bone,CAL-72
+Bone,CAL-78
+Bone,CHSA8926
+Bone,CS1
+Bone,ES1
+Bone,ES4
+Bone,ES6
+Bone,ES7
+Bone,ES8
+Bone,EW-1
+Bone,EW-11
+Bone,EW-13
+Bone,EW-16
+Bone,EW-18
+Bone,EW-22
+Bone,EW-24
+Bone,EW-3
+Bone,EW-7
+Bone,G-292-CLONE-A141B1
+Bone,H-EMC-SS
+Bone,HOS
+Bone,HUO-3N1
+Bone,HUO9
+Bone,MG-63
+Bone,MHH-ES-1
+Bone,NOS-1
+Bone,NY
+Bone,RH-1
+Bone,SJSA-1
+Bone,SK-ES-1
+Bone,SAOS-2
+Bone,TC-71
+Bone,U-2-OS
+Breast,AU565
+Breast,BT-20
+Breast,BT-474
+Breast,BT-483
+Breast,BT-549
+Breast,CAL-120
+Breast,CAL-148
+Breast,CAL-51
+Breast,CAL-85-1
+Breast,CAMA-1
+Breast,COLO-824
+Breast,DU-4475
+Breast,EFM-19
+Breast,EFM-192A
+Breast,EVSA-T
+Breast,HCC1143
+Breast,HCC1187
+Breast,HCC1395
+Breast,HCC1419
+Breast,HCC1428
+Breast,HCC1500
+Breast,HCC1599
+Breast,HCC1806
+Breast,HCC1937
+Breast,HCC1954
+Breast,HCC2157
+Breast,HCC38
+Breast,HCC70
+Breast,HDQ-P1
+Breast,HS-578-T
+Breast,JIMT-1
+Breast,MCF7
+Breast,MDA-MB-157
+Breast,MDA-MB-175-VII
+Breast,MDA-MB-231
+Breast,MDA-MB-361
+Breast,MDA-MB-415
+Breast,MDA-MB-436
+Breast,MDA-MB-453
+Breast,MDA-MB-468
+Breast,MFM-223
+Breast,MRK-NU-1
+Breast,OCUB-M
+Breast,T47D
+Breast,UACC-812
+Breast,UACC-893
+Breast,ZR-75-30
+Central Nervous System,42-MG-BA
+Central Nervous System,8-MG-BA
+Central Nervous System,A172
+Central Nervous System,AM-38
+Central Nervous System,BECKER
+Central Nervous System,CAS-1
+Central Nervous System,D-263MG
+Central Nervous System,D-283MED
+Central Nervous System,D-392MG
+Central Nervous System,DBTRG-05MG
+Central Nervous System,DK-MG
+Central Nervous System,DAOY
+Central Nervous System,GAMG
+Central Nervous System,GB-1
+Central Nervous System,GI-1
+Central Nervous System,H4
+Central Nervous System,KALS-1
+Central Nervous System,KINGS-1
+Central Nervous System,KS-1
+Central Nervous System,LN-18
+Central Nervous System,LN-229
+Central Nervous System,LN-405
+Central Nervous System,LNZTA3WT4
+Central Nervous System,M059J
+Central Nervous System,MOG-G-CCM
+Central Nervous System,MOG-G-UVW
+Central Nervous System,ONS-76
+Central Nervous System,PFSK-1
+Central Nervous System,SF268
+Central Nervous System,SF539
+Central Nervous System,SK-MG-1
+Central Nervous System,SK-PN-DW
+Central Nervous System,SW1088
+Central Nervous System,SW1783
+Central Nervous System,T98G
+Central Nervous System,U-118-MG
+Central Nervous System,U-87-MG
+Central Nervous System,U251
+Central Nervous System,YH-13
+Cervix,C-33-A
+Cervix,C-4-I
+Cervix,CA-SKI
+Cervix,DOTC2-4510
+Cervix,HT-3
+Cervix,HELA
+Cervix,ME-180
+Cervix,MS751
+Cervix,SISO
+Cervix,SKG-IIIA
+Cervix,SW756
+Cervix,SIHA
+Cervix,TC-YIK
+Endometrium,AN3-CA
+Endometrium,COLO-684
+Endometrium,EN
+Endometrium,ESS-1
+Endometrium,HEC-1
+Endometrium,KLE
+Endometrium,MFE-280
+Endometrium,MFE-296
+Endometrium,MFE-319
+Endometrium,RL95-2
+Endometrium,SNG-M
+Esophagus,COLO-680N
+Esophagus,EC-GI-10
+Esophagus,ESO26
+Esophagus,ESO51
+Esophagus,FLO-1
+Esophagus,KYAE-1
+Esophagus,KYSE-140
+Esophagus,KYSE-150
+Esophagus,KYSE-180
+Esophagus,KYSE-220
+Esophagus,KYSE-270
+Esophagus,KYSE-410
+Esophagus,KYSE-450
+Esophagus,KYSE-50
+Esophagus,KYSE-520
+Esophagus,KYSE-70
+Esophagus,OACM5-1
+Esophagus,OACP4C
+Esophagus,OE19
+Esophagus,OE21
+Esophagus,OE33
+Esophagus,SK-GT-4
+Esophagus,T-T
+Esophagus,TE-1
+Esophagus,TE-15
+Esophagus,TE-4
+Esophagus,TE-5
+Esophagus,TE-6
+Esophagus,TE-8
+Esophagus,TE-9
+Haematopoietic and Lymphoid,697
+Haematopoietic and Lymphoid,A3-KAW
+Haematopoietic and Lymphoid,A4-FUK
+Haematopoietic and Lymphoid,ALL-PO
+Haematopoietic and Lymphoid,ALL-SIL
+Haematopoietic and Lymphoid,AMO-1
+Haematopoietic and Lymphoid,ARH-77
+Haematopoietic and Lymphoid,ATN-1
+Haematopoietic and Lymphoid,BALL-1
+Haematopoietic and Lymphoid,BC-1
+Haematopoietic and Lymphoid,BE-13
+Haematopoietic and Lymphoid,BL-41
+Haematopoietic and Lymphoid,BV-173
+Haematopoietic and Lymphoid,CA46
+Haematopoietic and Lymphoid,CCRF-CEM
+Haematopoietic and Lymphoid,CESS
+Haematopoietic and Lymphoid,CML-T1
+Haematopoietic and Lymphoid,CTV-1
+Haematopoietic and Lymphoid,DB
+Haematopoietic and Lymphoid,DEL
+Haematopoietic and Lymphoid,DG-75
+Haematopoietic and Lymphoid,DND-41
+Haematopoietic and Lymphoid,DAUDI
+Haematopoietic and Lymphoid,EB-3
+Haematopoietic and Lymphoid,EB2
+Haematopoietic and Lymphoid,EJM
+Haematopoietic and Lymphoid,EM-2
+Haematopoietic and Lymphoid,EOL-1-CELL
+Haematopoietic and Lymphoid,GA-10
+Haematopoietic and Lymphoid,GDM-1
+Haematopoietic and Lymphoid,GR-ST
+Haematopoietic and Lymphoid,GRANTA-519
+Haematopoietic and Lymphoid,H9
+Haematopoietic and Lymphoid,HAL-01
+Haematopoietic and Lymphoid,HC-1
+Haematopoietic and Lymphoid,HD-MY-Z
+Haematopoietic and Lymphoid,HDLM-2
+Haematopoietic and Lymphoid,HH
+Haematopoietic and Lymphoid,HL-60
+Haematopoietic and Lymphoid,HS-445
+Haematopoietic and Lymphoid,IM-9
+Haematopoietic and Lymphoid,JJN-3
+Haematopoietic and Lymphoid,JSC-1
+Haematopoietic and Lymphoid,JURL-MK1
+Haematopoietic and Lymphoid,JVM-2
+Haematopoietic and Lymphoid,JVM-3
+Haematopoietic and Lymphoid,JIYOYEP-2003
+Haematopoietic and Lymphoid,K-562
+Haematopoietic and Lymphoid,KARPAS-1106P
+Haematopoietic and Lymphoid,KARPAS-231
+Haematopoietic and Lymphoid,KARPAS-299
+Haematopoietic and Lymphoid,KARPAS-422
+Haematopoietic and Lymphoid,KARPAS-45
+Haematopoietic and Lymphoid,KARPAS-620
+Haematopoietic and Lymphoid,KCL-22
+Haematopoietic and Lymphoid,KE-37
+Haematopoietic and Lymphoid,KG-1
+Haematopoietic and Lymphoid,KM-H2
+Haematopoietic and Lymphoid,KMOE-2
+Haematopoietic and Lymphoid,KMS-12-BM
+Haematopoietic and Lymphoid,KOPN-8
+Haematopoietic and Lymphoid,KU812
+Haematopoietic and Lymphoid,KY821
+Haematopoietic and Lymphoid,L-1236
+Haematopoietic and Lymphoid,L-363
+Haematopoietic and Lymphoid,L-428
+Haematopoietic and Lymphoid,L-540
+Haematopoietic and Lymphoid,LAMA-84
+Haematopoietic and Lymphoid,LC4-1
+Haematopoietic and Lymphoid,LOUCY
+Haematopoietic and Lymphoid,MC-CAR
+Haematopoietic and Lymphoid,ME-1
+Haematopoietic and Lymphoid,MEG-01
+Haematopoietic and Lymphoid,MHH-CALL-2
+Haematopoietic and Lymphoid,MHH-PREB-1
+Haematopoietic and Lymphoid,ML-2
+Haematopoietic and Lymphoid,MLMA
+Haematopoietic and Lymphoid,MM1S
+Haematopoietic and Lymphoid,MN-60
+Haematopoietic and Lymphoid,MOLM-13
+Haematopoietic and Lymphoid,MOLP-8
+Haematopoietic and Lymphoid,MOLT-13
+Haematopoietic and Lymphoid,MOLT-16
+Haematopoietic and Lymphoid,MOLT-4
+Haematopoietic and Lymphoid,MONO-MAC-6
+Haematopoietic and Lymphoid,MV-4-11
+Haematopoietic and Lymphoid,MO-T
+Haematopoietic and Lymphoid,NALM-6
+Haematopoietic and Lymphoid,NAMALWA
+Haematopoietic and Lymphoid,NKM-1
+Haematopoietic and Lymphoid,NOMO-1
+Haematopoietic and Lymphoid,OCI-AML2
+Haematopoietic and Lymphoid,OCI-AML3
+Haematopoietic and Lymphoid,OCI-AML5
+Haematopoietic and Lymphoid,OCI-M1
+Haematopoietic and Lymphoid,OPM-2
+Haematopoietic and Lymphoid,P12-ICHIKAWA
+Haematopoietic and Lymphoid,P30-OHK
+Haematopoietic and Lymphoid,P31-FUJ
+Haematopoietic and Lymphoid,P32-ISH
+Haematopoietic and Lymphoid,PF-382
+Haematopoietic and Lymphoid,RC-K8
+Haematopoietic and Lymphoid,REH
+Haematopoietic and Lymphoid,RF-48
+Haematopoietic and Lymphoid,RPMI-6666
+Haematopoietic and Lymphoid,RPMI-8226
+Haematopoietic and Lymphoid,RPMI-8402
+Haematopoietic and Lymphoid,RPMI-8866
+Haematopoietic and Lymphoid,RS4-11
+Haematopoietic and Lymphoid,RAJI
+Haematopoietic and Lymphoid,RAMOS-2G6-4C10
+Haematopoietic and Lymphoid,SCC-3
+Haematopoietic and Lymphoid,SK-MM-2
+Haematopoietic and Lymphoid,SLVL
+Haematopoietic and Lymphoid,SR
+Haematopoietic and Lymphoid,ST486
+Haematopoietic and Lymphoid,SU-DHL-10
+Haematopoietic and Lymphoid,SU-DHL-5
+Haematopoietic and Lymphoid,SU-DHL-6
+Haematopoietic and Lymphoid,SU-DHL-8
+Haematopoietic and Lymphoid,SUP-B15
+Haematopoietic and Lymphoid,SUP-HD1
+Haematopoietic and Lymphoid,SUP-M2
+Haematopoietic and Lymphoid,SUP-T1
+Haematopoietic and Lymphoid,TK
+Haematopoietic and Lymphoid,TUR
+Haematopoietic and Lymphoid,U-266
+Haematopoietic and Lymphoid,U-698-M
+Haematopoietic and Lymphoid,VAL
+Haematopoietic and Lymphoid,WIL2-NS
+Haematopoietic and Lymphoid,WSU-DLCL2
+Haematopoietic and Lymphoid,WSU-NHL
+Haematopoietic and Lymphoid,YT
+Head and Neck,A253
+Head and Neck,BB49-HNC
+Head and Neck,BICR10
+Head and Neck,BICR22
+Head and Neck,BICR78
+Head and Neck,CAL-27
+Head and Neck,CAL-33
+Head and Neck,CA9-22
+Head and Neck,DOK
+Head and Neck,DETROIT562
+Head and Neck,FADU
+Head and Neck,HO-1-N-1
+Head and Neck,HO-1-U-1
+Head and Neck,HSC-2
+Head and Neck,HSC-3
+Head and Neck,HSC-4
+Head and Neck,JHU-022
+Head and Neck,LB771-HNC
+Head and Neck,NCI-H3118
+Head and Neck,OSC-20
+Head and Neck,PCI-30
+Head and Neck,SAS
+Head and Neck,SAT
+Head and Neck,SCC-15
+Head and Neck,SCC-4
+Head and Neck,SCC-9
+Head and Neck,SKN-3
+Kidney,769-P
+Kidney,786-0
+Kidney,A498
+Kidney,A704
+Kidney,ACHN
+Kidney,BFTC-909
+Kidney,CAL-54
+Kidney,G-401
+Kidney,KMRC-1
+Kidney,KMRC-20
+Kidney,LB996-RCC
+Kidney,OS-RC-2
+Kidney,RCC-JW
+Kidney,RCC10RGB
+Kidney,SN12C
+Kidney,TK10
+Kidney,VMRC-RCZ
+Large Intestine,C2BBE1
+Large Intestine,CCK-81
+Large Intestine,CL-11
+Large Intestine,CL-40
+Large Intestine,COLO-205
+Large Intestine,COLO-320-HSR
+Large Intestine,COLO-678
+Large Intestine,CW-2
+Large Intestine,CAR-1
+Large Intestine,DIFI
+Large Intestine,GP5D
+Large Intestine,HCC2998
+Large Intestine,HCT-116
+Large Intestine,HCT-15
+Large Intestine,HT-29
+Large Intestine,HT55
+Large Intestine,KM12
+Large Intestine,LS-123
+Large Intestine,LS-180
+Large Intestine,LS-411N
+Large Intestine,LS-513
+Large Intestine,LOVO
+Large Intestine,MDST8
+Large Intestine,NCI-H716
+Large Intestine,NCI-H747
+Large Intestine,RCM-1
+Large Intestine,RKO
+Large Intestine,SK-CO-1
+Large Intestine,SNU-175
+Large Intestine,SNU-407
+Large Intestine,SNU-61
+Large Intestine,SNU-C1
+Large Intestine,SNU-C2B
+Large Intestine,SNU-C5
+Large Intestine,SW1116
+Large Intestine,SW1417
+Large Intestine,SW1463
+Large Intestine,SW48
+Large Intestine,SW620
+Large Intestine,SW626
+Large Intestine,SW837
+Large Intestine,SW948
+Large Intestine,T84
+Liver,C3A
+Liver,HLE
+Liver,HUH-7
+Liver,JHH-1
+Liver,JHH-2
+Liver,JHH-4
+Liver,JHH-6
+Liver,JHH-7
+Liver,SK-HEP-1
+Liver,SNU-182
+Liver,SNU-387
+Liver,SNU-398
+Liver,SNU-423
+Liver,SNU-449
+Liver,HUH-1
+Lung,A549
+Lung,COLO-668
+Lung,COR-L105
+Lung,COR-L23
+Lung,COR-L279
+Lung,COR-L311
+Lung,COR-L32
+Lung,COR-L88
+Lung,COR-L95
+Lung,CPC-N
+Lung,CALU-3
+Lung,CALU-6
+Lung,DMS-114
+Lung,DMS-273
+Lung,DMS-53
+Lung,EBC-1
+Lung,EMC-BAC-2
+Lung,EPLC-272H
+Lung,HARA
+Lung,HCC-15
+Lung,HCC-44
+Lung,HCC-78
+Lung,HCC-827
+Lung,HOP-62
+Lung,HOP-92
+Lung,IA-LM
+Lung,IST-MES1
+Lung,IST-SL2
+Lung,KNS-62
+Lung,LC-1-SQ
+Lung,LCLC-103H
+Lung,LCLC-97TM1
+Lung,LK-2
+Lung,LOU-NH91
+Lung,LU-135
+Lung,LU-139
+Lung,LU-165
+Lung,LU-65
+Lung,LU-99A
+Lung,LXF-289
+Lung,MPP-89
+Lung,MS-1
+Lung,MSTO-211H
+Lung,NCI-H1048
+Lung,NCI-H1092
+Lung,NCI-H1155
+Lung,NCI-H1299
+Lung,NCI-H1341
+Lung,NCI-H1355
+Lung,NCI-H1417
+Lung,NCI-H1435
+Lung,NCI-H1563
+Lung,NCI-H1568
+Lung,NCI-H1573
+Lung,NCI-H1581
+Lung,NCI-H1623
+Lung,NCI-H1648
+Lung,NCI-H1650
+Lung,NCI-H1651
+Lung,NCI-H1666
+Lung,NCI-H1688
+Lung,NCI-H1693
+Lung,NCI-H1694
+Lung,NCI-H1703
+Lung,NCI-H1755
+Lung,NCI-H1781
+Lung,NCI-H1792
+Lung,NCI-H1793
+Lung,NCI-H1838
+Lung,NCI-H1869
+Lung,NCI-H1876
+Lung,NCI-H1915
+Lung,NCI-H1944
+Lung,NCI-H196
+Lung,NCI-H1963
+Lung,NCI-H1975
+Lung,NCI-H1993
+Lung,NCI-H2009
+Lung,NCI-H2023
+Lung,NCI-H2029
+Lung,NCI-H2052
+Lung,NCI-H2066
+Lung,NCI-H2085
+Lung,NCI-H2087
+Lung,NCI-H209
+Lung,NCI-H211
+Lung,NCI-H2122
+Lung,NCI-H2141
+Lung,NCI-H2170
+Lung,NCI-H2228
+Lung,NCI-H226
+Lung,NCI-H23
+Lung,NCI-H2342
+Lung,NCI-H2347
+Lung,NCI-H2369
+Lung,NCI-H2373
+Lung,NCI-H2405
+Lung,NCI-H2452
+Lung,NCI-H2461
+Lung,NCI-H2591
+Lung,NCI-H2595
+Lung,NCI-H2722
+Lung,NCI-H2731
+Lung,NCI-H2795
+Lung,NCI-H28
+Lung,NCI-H2818
+Lung,NCI-H3122
+Lung,NCI-H322M
+Lung,NCI-H345
+Lung,NCI-H358
+Lung,NCI-H441
+Lung,NCI-H446
+Lung,NCI-H513
+Lung,NCI-H520
+Lung,NCI-H522
+Lung,NCI-H524
+Lung,NCI-H526
+Lung,NCI-H596
+Lung,NCI-H64
+Lung,NCI-H650
+Lung,NCI-H661
+Lung,NCI-H69
+Lung,NCI-H720
+Lung,NCI-H727
+Lung,NCI-H810
+Lung,NCI-H82
+Lung,NCI-H835
+Lung,NCI-H841
+Lung,NCI-H847
+Lung,PC-14
+Lung,RERF-LC-KJ
+Lung,RERF-LC-SQ1
+Lung,SBC-3
+Lung,SBC-5
+Lung,SHP-77
+Lung,SK-LU-1
+Lung,SK-MES-1
+Lung,SW1271
+Lung,SW1573
+Lung,SW900
+Lung,UMC-11
+Lung,VMRC-LCD
+Other,22RV1
+Other,BPH-1
+Other,CAL-39
+Other,DU-145
+Other,EGI-1
+Other,ETK-1
+Other,HUCCT1
+Other,LNCAP-CLONE-FGC
+Other,MES-SA
+Other,NCCIT
+Other,NEC8
+Other,PC-3
+Other,PWR-1E
+Other,SK-UT-1
+Other,SKN
+Other,SW13
+Other,TGBC1TKB
+Other,TGBC24TKB
+Other,VCAP
+Ovary,A2780
+Ovary,CAOV-4
+Ovary,DOV13
+Ovary,EFO-21
+Ovary,ES-2
+Ovary,FU-OV-1
+Ovary,HEY
+Ovary,IGROV-1
+Ovary,KGN
+Ovary,KURAMOCHI
+Ovary,OAW-28
+Ovary,OAW-42
+Ovary,OC-314
+Ovary,OV-56
+Ovary,OV-90
+Ovary,OVCA420
+Ovary,OVCAR-3
+Ovary,OVCAR-4
+Ovary,OVCAR-5
+Ovary,OVCAR-8
+Ovary,OVISE
+Ovary,OVKATE
+Ovary,OVMIU
+Ovary,OVTOKO
+Ovary,PA-1
+Ovary,PEO1
+Ovary,RMG-I
+Ovary,SK-OV-3
+Ovary,TOV-112D
+Ovary,TOV-21G
+Ovary,TYK-NU
+Pancreas,ASPC-1
+Pancreas,BXPC-3
+Pancreas,CAPAN-1
+Pancreas,CAPAN-2
+Pancreas,CFPAC-1
+Pancreas,DAN-G
+Pancreas,HPAC
+Pancreas,HPAF-II
+Pancreas,HS-766T
+Pancreas,HUP-T3
+Pancreas,HUP-T4
+Pancreas,KP-1N
+Pancreas,KP-2
+Pancreas,KP-3
+Pancreas,KP-4
+Pancreas,MIA-PACA-2
+Pancreas,PA-TU-8902
+Pancreas,PA-TU-8988T
+Pancreas,PANC-02-03
+Pancreas,PANC-03-27
+Pancreas,PANC-04-03
+Pancreas,PANC-08-13
+Pancreas,PANC-10-05
+Pancreas,PL18
+Pancreas,PL4
+Pancreas,PSN1
+Pancreas,SU8686
+Pancreas,SUIT-2
+Pancreas,SW1990
+Pancreas,YAPC
+Peripheral Nervous System,BE2-M17
+Peripheral Nervous System,CHP-134
+Peripheral Nervous System,CHP-212
+Peripheral Nervous System,GI-ME-N
+Peripheral Nervous System,GOTO
+Peripheral Nervous System,IMR-5
+Peripheral Nervous System,KELLY
+Peripheral Nervous System,KP-N-YN
+Peripheral Nervous System,NB(TU)1-10
+Peripheral Nervous System,NB1
+Peripheral Nervous System,NB10
+Peripheral Nervous System,NB12
+Peripheral Nervous System,NB13
+Peripheral Nervous System,NB14
+Peripheral Nervous System,NB69
+Peripheral Nervous System,NB7
+Peripheral Nervous System,NH-12
+Peripheral Nervous System,SIMA
+Peripheral Nervous System,SK-N-AS
+Peripheral Nervous System,SK-N-DZ
+Peripheral Nervous System,SK-N-FI
+Peripheral Nervous System,SK-N-SH
+Peripheral Nervous System,TGW
+Skin,A101D
+Skin,A2058
+Skin,A375
+Skin,C32
+Skin,CHL-1
+Skin,COLO-679
+Skin,COLO-792
+Skin,COLO-829
+Skin,G-361
+Skin,GAK
+Skin,HMV-II
+Skin,HT-144
+Skin,IGR-1
+Skin,IGR-37
+Skin,IST-MEL1
+Skin,LOXIMVI
+Skin,M14
+Skin,MEL-JUSO
+Skin,MEWO
+Skin,RPMI-7951
+Skin,SH-4
+Skin,SK-MEL-1
+Skin,SK-MEL-2
+Skin,SK-MEL-24
+Skin,UACC-257
+Skin,UACC-62
+Skin,WM-115
+Skin,WM1552C
+Skin,WM278
+Skin,WM35
+Skin,WM793B
+Soft Tissue,A204
+Soft Tissue,G-402
+Soft Tissue,GCT
+Soft Tissue,HT-1080
+Soft Tissue,HS-633T
+Soft Tissue,KYM-1
+Soft Tissue,MFH-INO
+Soft Tissue,RD
+Soft Tissue,RH-41
+Soft Tissue,RKN
+Soft Tissue,SJRH30
+Soft Tissue,SK-LMS-1
+Soft Tissue,SW684
+Soft Tissue,SW872
+Soft Tissue,SW982
+Soft Tissue,VA-ES-BJ
+Stomach,23132-87
+Stomach,AGS
+Stomach,ECC10
+Stomach,FU97
+Stomach,GCIY
+Stomach,HGC-27
+Stomach,HSC-39
+Stomach,HS-746T
+Stomach,IM-95
+Stomach,KATOIII
+Stomach,MKN1
+Stomach,MKN28
+Stomach,MKN45
+Stomach,NCI-N87
+Stomach,NUGC-3
+Stomach,NUGC-4
+Stomach,OCUM-1
+Stomach,RERF-GC-1B
+Stomach,SK-GT-2
+Stomach,SNU-1
+Stomach,SNU-16
+Stomach,SNU-5
+Stomach,TGBC11TKB
+Thyroid,8305C
+Thyroid,8505C
+Thyroid,ASH-3
+Thyroid,B-CPAP
+Thyroid,BHT-101
+Thyroid,CAL-62
+Thyroid,CGTH-W-1
+Thyroid,FTC-133
+Thyroid,HTC-C3
+Thyroid,IHH-4
+Thyroid,K5
+Thyroid,RO82-W-1
+Thyroid,TT
+Thyroid,TT2609-C02
