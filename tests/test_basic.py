@@ -6,7 +6,7 @@ import sys
 
 def test_version():
     """Test that version is accessible"""
-    import drexpa
+    import drexpa as drexpa
     assert hasattr(drexpa, '__version__')
     assert isinstance(drexpa.__version__, str)
     assert len(drexpa.__version__) > 0
@@ -18,7 +18,7 @@ def test_lazy_import():
     # Clear any previous imports
     modules_before = set(sys.modules.keys())
 
-    import drexpa
+    import drexpa as drexpa
 
     modules_after = set(sys.modules.keys())
     new_modules = modules_after - modules_before

@@ -7,6 +7,7 @@
 **DREXPA** (DRug EXperimental PAnel) transforms experimental drug screening datasets into in silico drug panel and perturbations that can be test in Boolean models using the DrugLogics & Trafikk pipelines (drabme/Bless modules). It automates drug name resolution, target retrieval, node mapping, and creates drug panels and perturbation files compatible with in silico validation workflows.
 
 **For first-time users:** Start with [QUICKSTART.md](QUICKSTART.md) for minimal runnable examples.  
+**For full configuration options:** See [config_readme.md](config_readme.md).  
 **For project structure & internals:** See [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).  
 **For maintenance & future work:** See [TODO.md](TODO.md).
 

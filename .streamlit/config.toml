@@ -1,0 +1,17 @@
+[theme]
+primaryColor = "#1f77b4"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f0f2f6"
+
+[client]
+maxUploadSize = 200
+
+[logger]
+level = "info"
+
+[server]
+headless = false
+port = 8501
+enableCORS = true
+enableXsrfProtection = true
+maxUploadSize = 200

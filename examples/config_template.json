@@ -1,21 +1,15 @@
 {
   "global": {
-    "output_dir": "results",
-    "base_data_dir": "data/input",
-    "verbose": false,
-    "save": true
+    "output_dir": "results_no_doses",
+    "base_data_dir": "data2",
+    "verbose": false
   },
   "paths": {
     "drug_names_file": "drug_names.txt",
-    "synergy_data_file": "synergy_data.csv",
-    "node_dict_file": "node_dict.csv",
-    "db_file": "drug_targets.db",
-    "manual_chembl_csv": "manual_chembl.csv"
+    "synergy_data_file": "synergy_data_no_conc.csv",
+    "node_dict_file": "node_dict.csv"
   },
-  "columns": {
-    "drug_name": "drug_name",
-    "concentration": "concentration",
-    "cell_line": "cell_line",
-    "synergy": "synergy"
+  "options": {
+    "double_drug_screen": true
   }
 }

@@ -3,6 +3,7 @@
 Two minimal, self-contained examples showing DREXPA pipelines end-to-end.
 
 **For in-depth documentation**, see [README.md](README.md).  
+**For full configuration reference**, see [config_readme.md](config_readme.md).  
 **For architecture & code layout**, see [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md).
 
 ---

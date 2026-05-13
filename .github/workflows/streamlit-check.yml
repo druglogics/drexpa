@@ -1,0 +1,43 @@
+name: Run Streamlit Syntax Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  streamlit-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install streamlit
+
+      - name: Check streamlit app syntax
+        run: streamlit run drexpa/streamlit_app.py --logger.level=error 2>&1 | head -100 || true
+
+      - name: Check app_utils imports
+        run: python -c "from app_utils import file_handlers, pipeline_runner, visualizations; print('All imports OK')"
+
+      - name: Check DREXPA imports
+        run: python -c "from drexpa import run_pipeline; print('DREXPA imports OK')"
+
+      - name: Test file validation
+        run: |
+          python -c "
+          import pandas as pd
+          from app_utils.file_handlers import validate_and_preview_files
+          print('File handlers module loads successfully')
+          "

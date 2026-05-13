@@ -1,0 +1,25 @@
+{
+    "global": {
+        "output_dir": "data/output/oncologics_fullpanel",
+        "base_data_dir": "data/input/oncologics",
+        "verbose": true,
+        "save": true
+    },
+    "paths": {
+        "drug_names_file": "oncologics_drug_names.txt",
+        "synergy_data_file": "oncologics_drug_targets.csv",
+        "node_dict_file": "CFD_nekext_nodes.csv",
+        "tissue_cline_file": "cell_line_list.csv",
+        "manual_chembl_csv": "manual_chembl.csv"
+    },
+    "columns": {
+        "drug_name": "drug_name",
+        "drug_name_A": "drug_name",
+        "targets": "targets"
+    },
+    "options": {
+        "synergy_threshold": 0.0,
+        "double_drug_screen": false,
+        "original_target_merge": "override"
+    }
+}

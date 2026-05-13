@@ -2,9 +2,41 @@ drexpa.egg-info
 .pytest_cache
 drexpa/__pycache__
 tests/__pycache__
-
+drexpa/api/__pycache__
+drexpa/features/__pycache__
+drexpa/resources/__pycache__
+drexpa.egg-info/
+drexpa/tests/__pycache__/
 #BASHI DATASET
 data/output/
 data/input/bashi/
 pre-processing notebooks/dataprocessing_bashi.ipynb
 
+# Streamlit app outputs
+drexpa/
+output/
+*.csv
+*.sif
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+temp/
