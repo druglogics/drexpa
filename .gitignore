@@ -7,10 +7,9 @@ drexpa/features/__pycache__
 drexpa/resources/__pycache__
 drexpa.egg-info/
 drexpa/tests/__pycache__/
-#BASHI DATASET
-data/output/
-data/input/bashi/
-pre-processing notebooks/dataprocessing_bashi.ipynb
+
+# DRUGLOGICS DATASETS
+data/
 
 # Streamlit app outputs
 drexpa/

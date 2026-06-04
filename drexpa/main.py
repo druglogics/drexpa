@@ -39,13 +39,14 @@ class DrexpaPipeline:
     """
     
     def __init__(self, config: Config, synergy_data_file: str = None):
+        synergy_path = config.paths.get("synergy_data_file")
         self.config = config
         if synergy_data_file:
             self.synergy_data_file = synergy_data_file
-        elif 'synergy_data_file' in config.paths:
+        elif synergy_path:
             self.synergy_data_file = os.path.join(
-                config.global_config['base_data_dir'], 
-                config.paths['synergy_data_file']
+                config.global_config.get("base_data_dir", ""),
+                synergy_path
             )
         else:
             self.synergy_data_file = None
@@ -275,6 +276,44 @@ class DrexpaPipeline:
         processor = DoseProcessor(**doses_config)
         self.drugdoses_df = processor.get_drugdoses()
         print(f"Processed doses for {len(self.drugdoses_df)} unique drug entries")
+
+    def _load_drug_input_table(self):
+        """Load drug_names_file as a table if possible. Returns DataFrame or None."""
+        drug_names_path = self._required_path_for('drug_names_file')
+        if drug_names_path is None or not os.path.exists(drug_names_path):
+            return None
+        try:
+            df = pd.read_csv(drug_names_path)
+            return df
+        except Exception:
+            # Not a parseable CSV/table (likely plain TXT)
+            return None
+
+    def _build_drugdoses_from_drug_input(self, drug_input_df):
+        """Build self.drugdoses_df from a drug input DataFrame if it has concentration column."""
+        if drug_input_df is None or drug_input_df.empty:
+            return None
+        conc_col = self.config.columns.get('concentration', 'concentration')
+        drugname_col = self.config.columns.get('drug_name', 'drug_name')
+        if conc_col not in drug_input_df.columns:
+            return None
+        # Prepare doses_config and call DoseProcessor with drugscreen_df
+        doses_config = self.config.get_doses_config()
+        doses_config.update({
+            'drugscreen_df': drug_input_df,
+            'drugID_file': os.path.join(self.config.global_config['output_dir'], 'drug_ChEMBL_IDs.csv'),
+            'column_drugname': drugname_col,
+            'column_concentration': conc_col,
+            'column_chembl': self.config.columns.get('chembl_id', 'ChEMBL_ID')
+        })
+        processor = DoseProcessor(**doses_config)
+        self.drugdoses_df = processor.get_drugdoses()
+        print("DEBUG drugdoses_df columns:", list(self.drugdoses_df.columns))
+        print("DEBUG first drugdoses rows:")
+        print(self.drugdoses_df.head())
+        if self.config.global_config.get('verbose', False):
+            print("Using concentration column from drug input table to build drug doses")
+        return self.drugdoses_df
     
     def _get_targets(self):
         """Get drug targets from database."""
@@ -307,28 +346,66 @@ class DrexpaPipeline:
             # Use ChEMBL ID-based processing without concentrations
             # Check if synergy data has target columns for manual merging
             double_drug = self.config.options.get('double_drug_screen', False)
-            manual_targets_column = ['targets_A', 'targets_B'] if double_drug else 'targets'
+            manual_targets_column = (
+                [self.config.columns.get('targets_A', 'targets_A'),
+                self.config.columns.get('targets_B', 'targets_B')]
+                if double_drug
+                else self.config.columns.get('targets', 'targets')
+            )
             
-            # Check if synergy data exists and has the required target columns
-            if (self.synergy_df is not None and 
-                all(col in self.synergy_df.columns for col in 
-                    (manual_targets_column if isinstance(manual_targets_column, list) else [manual_targets_column]))):
-                manual_targets_df = self.synergy_df
+            # Check if manual targets are available
+            manual_targets_df = None
+
+            if self.synergy_df is not None:
+                candidate_df = self.synergy_df
             else:
-                manual_targets_df = None
+                # Try to load drug input table (CSV) and use it for concentrations/manual targets
+                candidate_df = self._load_drug_input_table()
+                if candidate_df is not None:
+                    # If concentration column present, build drugdoses_df for target processing
+                    built = self._build_drugdoses_from_drug_input(candidate_df)
+                    if built is not None and self.config.global_config.get('verbose', False):
+                        print("Using concentration column from drug input table")
+                else:
+                    drug_input_file = self.config.get_chembl_config()["drugnames_file"]
+                    try:
+                        candidate_df = pd.read_csv(drug_input_file)
+                    except Exception:
+                        candidate_df = pd.DataFrame()
+
+            target_cols = manual_targets_column if isinstance(manual_targets_column, list) else [manual_targets_column]
+
+            if all(col in candidate_df.columns for col in target_cols):
+                manual_targets_df = candidate_df
+            else:
                 manual_targets_column = None
             
-            targets_config.update({
-                'drugdoses_df': self.drug_ids_df,
-                'column_drugname': 'drug_name',
-                'column_chembl': 'ChEMBL_ID',
-                'ic50_value': 10000,  # Default IC50 threshold (10 µM)
-                'merge_on': 'ChEMBL_ID',  # Merge on ID only, no concentration
-                'manual_targets_df': manual_targets_df,
-                'manual_targets_column': manual_targets_column
-            })
+            if self.drugdoses_df is not None:
+                # If concentrations were recovered from drug input table, use concentration-aware target lookup.
+                targets_config.update({
+                    'drugdoses_df': self.drugdoses_df,
+                    'column_drugname': 'drug_name',
+                    'column_chembl': 'ChEMBL_ID',
+                    'column_concentration': 'concentration',
+                    'merge_on': 'ChEMBL_conc',
+                    'manual_targets_df': manual_targets_df,
+                    'manual_targets_column': manual_targets_column
+                })
+            else:
+                # Fallback for true no-concentration inputs.
+                targets_config.update({
+                    'drugdoses_df': self.drug_ids_df,
+                    'column_drugname': 'drug_name',
+                    'column_chembl': 'ChEMBL_ID',
+                    'ic50_value': 10000,  # Default IC50 threshold (10 µM)
+                    'merge_on': 'ChEMBL_ID',  # Merge on ID only, no concentration
+                    'manual_targets_df': manual_targets_df,
+                    'manual_targets_column': manual_targets_column
+                })
         
         processor = TargetProcessor(**targets_config)
+        if self.config.global_config.get('verbose', False):
+            print("Starting target processing")
         self.chembl_targets_df = processor.get_chembl_targets()
         print("Got targets for drugs")
     

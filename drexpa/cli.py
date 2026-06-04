@@ -6,7 +6,7 @@ import logging
 import sys
 from .main import run_pipeline
 from .config import get_default_config, merge_config
-from .. import __version__
+from . import __version__
 from .step_registry import ordered_step_names, until_choices
 
 

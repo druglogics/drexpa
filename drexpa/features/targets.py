@@ -2,7 +2,7 @@
 
 import pandas
 from .helpers import save_file
-from ...features import target_checker
+from . import target_checker
 
 
 class TargetProcessor:
