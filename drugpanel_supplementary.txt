@@ -1,3 +1,0 @@
-#Name	Action	Target	Target2
-CHEMBL4078100_10000_nM	inhibits	BRD4
-CHEMBL4078100_10000_nM	inhibits	BRD4

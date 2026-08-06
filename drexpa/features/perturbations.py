@@ -1,5 +1,5 @@
 # Perturbations panel creation module
-
+import re
 import os
 import logging
 
@@ -34,10 +34,25 @@ class PerturbationPanelBuilder:
         self.tissue_mapping = None
         if self.tissue_cline_file and os.path.exists(self.tissue_cline_file):
             import pandas as pd
-            self.tissue_mapping = pd.read_csv(self.tissue_cline_file)
+            tissue_mapping_df = pd.read_csv(self.tissue_cline_file)
+            cell_line_candidates = ["CELL_LINE_NAME","cell_line_name","CELL_LINE","cell_line","Cell_Line","cline"]
+            tissue_candidates = ["TISSUE","tissue","Tissue","tissue_type","Tissue_Type", "tissues"]
+            cell_line_column = next(
+                (col for col in cell_line_candidates if col in tissue_mapping_df.columns),
+                None,
+            )
+            tissue_column = next(
+                (col for col in tissue_candidates if col in tissue_mapping_df.columns),
+                None,
+            )
+            if cell_line_column is None or tissue_column is None:
+                raise ValueError(
+                    "Could not identify tissue mapping columns. "
+                    f"Available columns: {list(tissue_mapping_df.columns)}"
+                )
             self.tissue_mapping = dict(zip(
-                self.tissue_mapping[self.COLUMN_CELL_LINE_NAME], 
-                self.tissue_mapping[self.COLUMN_TISSUE]
+                tissue_mapping_df[cell_line_column],
+                tissue_mapping_df[tissue_column]
             ))
 
         # Validate inputs
@@ -106,12 +121,14 @@ class PerturbationPanelBuilder:
 
     def _create_cell_line_directory(self, cell_line):
         """Create a hierarchical directory structure: tissue/cell_line/"""
+        # Normalize cell line name to avoid issues with special characters
+        normalized_cell_line = re.sub(r'[^A-Z0-9]+', '', str(cell_line).strip().upper())
         if self.tissue_mapping and cell_line in self.tissue_mapping:
             tissue = self.tissue_mapping[cell_line]
-            cell_line_directory = os.path.join(self.output_directory, tissue, cell_line)
+            cell_line_directory = os.path.join(self.output_directory, tissue, normalized_cell_line)
         else:
             # Fallback to original structure if no tissue mapping
-            cell_line_directory = os.path.join(self.output_directory, cell_line)
+            cell_line_directory = os.path.join(self.output_directory, normalized_cell_line)
         
         os.makedirs(cell_line_directory, exist_ok=True)
         return cell_line_directory

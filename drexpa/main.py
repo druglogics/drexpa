@@ -87,6 +87,15 @@ class DrexpaPipeline:
 
         self._preflight_validate(steps)
         self._set_runtime_mode(steps)
+
+        # Adapt execution steps for datasets without concentration data
+        if self.runtime_mode == RUNTIME_MODE_WITHOUT_CONCENTRATIONS:
+            steps = [
+                step for step in steps
+                if step not in {"doses", "combinations"}]
+            logger.info(
+                "event=runtime_adaptation mode=%s skipped_steps=doses,combinations",
+                self.runtime_mode,)
         
         print("=" * 80)
         print("RUNNING DREXPA PIPELINE")
@@ -240,9 +249,24 @@ class DrexpaPipeline:
 
         total_seconds = sum(self.step_durations.values())
         logger.info("event=pipeline_summary total_seconds=%.3f", total_seconds)
+        rows = []
         for step_name, duration in self.step_durations.items():
             logger.info("event=pipeline_summary_step step=%s duration_seconds=%.3f", step_name, duration)
-    
+            rows.append({
+               "runtime_mode": self.runtime_mode,
+               "step": step_name,
+               "duration_seconds": round(duration, 3),
+            })
+        rows.append({
+            "runtime_mode": self.runtime_mode,
+            "step": "total",
+            "duration_seconds": round(total_seconds, 3),
+        })
+        timing_df = pd.DataFrame(rows)
+        timing_file = os.path.join(self.config.global_config['output_dir'], "drexpa_runtime.csv")
+        timing_df.to_csv(timing_file, index=False)
+        print(f"\nTiming summary saved to: {timing_file}")
+        
     def _load_synergy_data(self):
         """Load synergy data from file."""
         self.synergy_df = pd.read_csv(self.synergy_data_file)
@@ -440,12 +464,25 @@ class DrexpaPipeline:
             print("Creating combinations data from synergy data (no concentrations)...")
             
             # Get list of drugs that have profiles
-            drugs_with_profiles = set(self.drugprofiles_df['drug_name'].unique())
-            
-            # Filter synergy_df to only combinations where both drugs have profiles
+            drug_a_col = self.config.columns.get("drug_name_A", "drug_name_A")
+            drug_b_col = self.config.columns.get("drug_name_B", "drug_name_B")
+
+            # Normalize names for case-insensitive matching
+            drugs_with_profiles = set(
+                self.drugprofiles_df["drug_name"]
+                .dropna().astype(str).str.strip().str.upper())
+
+            drug_a_normalized = (
+                self.synergy_df[drug_a_col]
+                .astype(str).str.strip().str.upper())
+
+            drug_b_normalized = (
+                self.synergy_df[drug_b_col]
+                .astype(str).str.strip().str.upper())
+
             filtered_synergy_df = self.synergy_df[
-                self.synergy_df['drug_name_A'].isin(drugs_with_profiles) & 
-                self.synergy_df['drug_name_B'].isin(drugs_with_profiles)
+                drug_a_normalized.isin(drugs_with_profiles)
+                & drug_b_normalized.isin(drugs_with_profiles)
             ].copy()
             
             if len(filtered_synergy_df) == 0:
@@ -459,15 +496,22 @@ class DrexpaPipeline:
             # choose the first PD_profile to create a deterministic mapping for
             # no-concentration combination screens.
             drug_profiles = (
-                self.drugprofiles_df.groupby('drug_name')['PD_profile']
-                .first()
-                .to_dict()
-            )
+                self.drugprofiles_df.assign(
+                    normalized_drug_name=(
+                        self.drugprofiles_df["drug_name"]
+                        .astype(str).str.strip().str.upper()))
+                .groupby("normalized_drug_name")["PD_profile"]
+                .first().to_dict())
 
             # Create combinations_short_df
             combinations_short_df = filtered_synergy_df.copy()
-            combinations_short_df['anchor_pipeline_ID'] = combinations_short_df['drug_name_A'].map(drug_profiles)
-            combinations_short_df['library_pipeline_ID'] = combinations_short_df['drug_name_B'].map(drug_profiles)
+            combinations_short_df["anchor_pipeline_ID"] = (
+                combinations_short_df[drug_a_col]
+                .astype(str).str.strip().str.upper().map(drug_profiles))
+
+            combinations_short_df["library_pipeline_ID"] = (
+                combinations_short_df[drug_b_col]
+                .astype(str).str.strip().str.upper().map(drug_profiles))
             
             # Rename columns to match expected format
             combinations_short_df = combinations_short_df.rename(columns={
